@@ -1,6 +1,7 @@
 import express from "express";
-import cors from "cors";
 import dotenv from "dotenv";
+dotenv.config();
+import cors from "cors";
 import { sequelize } from "./db";
 import "reflect-metadata";
 
@@ -9,7 +10,6 @@ import languageRoutes from "./routes/languages";
 import userRoutes from "./routes/user";
 import historyRoutes from "./routes/history";
 
-dotenv.config();
 
 async function startServer() {
   try {
